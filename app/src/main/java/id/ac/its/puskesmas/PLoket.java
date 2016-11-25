@@ -1,6 +1,6 @@
 package id.ac.its.puskesmas;
 
-import android.content.Context;
+import android.app.Activity;
 import android.content.ContextWrapper;
 
 import com.pixplicity.easyprefs.library.Prefs;
@@ -13,7 +13,6 @@ public class PLoket {
     private String ID;
     private String nama;
     private String telp;
-    private Context context;
 
     public void setNama(String nama) {
         this.nama = nama;
@@ -39,9 +38,9 @@ public class PLoket {
         return ID;
     }
 
-    public void simpandb(Pasien pasien){
+    public void simpandb(Activity ini,Pasien pasien){
         new Prefs.Builder()
-                .setContext(context)
+                .setContext(ini)
                 .setMode(ContextWrapper.MODE_PRIVATE)
                 .setPrefsName("puskesmas")
                 .setUseDefaultSharedPreference(true)

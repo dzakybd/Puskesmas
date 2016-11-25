@@ -42,4 +42,32 @@ public class Dokter {
         return telp;
     }
 
+    public String saran(int penyakit) {
+        String text;
+        switch (penyakit){
+            case 1:
+                text="Untuk penyakit panas ini biasanya anda kurang istirahat, " +
+                        "jadi anda terlalu banyak kesibukan sehingga anda lupa dengan diri anda " +
+                        "Silahkan resep dibawa ke bagian apoteker " +
+                        "Panas tubuh ";
+                break;
+            case 2:
+                text="Untuk penyakit pusing ini biasanya anda kurang istirahat, " +
+                        "jadi anda terlalu banyak kesibukan sehingga anda lupa dengan diri anda " +
+                        "Silahkan resep dibawa ke bagian apoteker " +
+                        "Pusing Kepala ";
+                break;
+            case 3:
+                text="Untuk penyakit pilek ini biasanya anda kurang istirahat, " +
+                        "jadi anda terlalu banyak kesibukan sehingga anda lupa dengan diri anda " +
+                        "Silahkan resep dibawa ke bagian apoteker " +
+                        "Hidung Tersumbat ";
+                break;
+            default:
+                text="";
+                break;
+        }
+        return text;
+    }
+
 }

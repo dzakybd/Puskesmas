@@ -16,7 +16,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".FormKeluhan"/>
-        <activity android:name=".FormResep"/>
         <activity android:name=".FormObat"/>
 
     </application>

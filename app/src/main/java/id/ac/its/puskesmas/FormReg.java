@@ -16,6 +16,7 @@ public class FormReg extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Selamat Datang di Puskesmas");
         setContentView(R.layout.registrasi);
         input_nama = (EditText) findViewById(R.id.input_nama);
         input_alamat = (EditText) findViewById(R.id.input_alamat);
@@ -33,11 +34,12 @@ public class FormReg extends AppCompatActivity {
 
     public void registrasi(View v){
         prosesdata = new Prosesdata();
-        prosesdata.setdata(input_nama.getText().toString(),input_alamat.getText().toString(),input_ttl.getText().toString(),input_pekerjaan.getText().toString(),input_umur.getText().toString());
+        prosesdata.setdata(this, input_nama.getText().toString(),input_alamat.getText().toString(),input_ttl.getText().toString(),input_pekerjaan.getText().toString(),input_umur.getText().toString());
         Snackbar.make(v, "Terdaftar", Snackbar.LENGTH_LONG)
                 .show();
         Intent i = new Intent(FormReg.this, FormKeluhan.class);
         startActivity(i);
+        finish();
     }
 
 

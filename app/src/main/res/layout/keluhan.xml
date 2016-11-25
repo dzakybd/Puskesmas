@@ -9,7 +9,10 @@
         android:layout_marginTop="19dp"
         android:id="@+id/textView_keluhan"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/spinner" />
+        android:layout_alignStart="@+id/spinner"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black" />
 
     <Spinner
         android:layout_width="match_parent"
@@ -17,23 +20,63 @@
         android:layout_marginTop="23dp"
         android:id="@+id/spinner"
         android:layout_below="@+id/textView_keluhan"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentStart="true"
+        android:spinnerMode="dialog" />
 
     <Button
-        android:text="OK"
+        android:text="Ambil Resep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner"
+        android:id="@+id/button_keluhan"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
-        android:id="@+id/button_keluhan" />
+        android:layout_marginBottom="43dp" />
 
     <TextView
-        android:text="Saran"
+        android:layout_width="match_parent"
+        android:id="@+id/textView_saran"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_height="100dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="Saran dari dokter :"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView_saran"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/button_keluhan"
-        android:layout_centerHorizontal="true" />
+        android:ellipsize="none"
+        android:scrollHorizontally="false"
+        android:id="@+id/textView3"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="38dp"
+        android:layout_below="@+id/spinner"
+        android:layout_alignEnd="@+id/button_keluhan" />
+
+    <TextView
+        android:text="Resep dari dokter :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_saran"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="none"
+        android:scrollHorizontally="false"
+        android:layout_marginTop="12dp"
+        android:id="@+id/textView5"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/textView_resep"
+        android:layout_above="@+id/button_keluhan"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="15dp"
+        android:textAlignment="center" />
+
 </RelativeLayout>
