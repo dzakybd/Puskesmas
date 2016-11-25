@@ -11,6 +11,6 @@ public class FormKeluhan extends AppCompatActivity {
         setContentView(R.layout.keluhan);
     }
 
-    public void registrasi(View v){
+    public void keluhan(View v){
     }
 }
